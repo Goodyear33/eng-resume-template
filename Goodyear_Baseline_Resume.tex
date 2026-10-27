@@ -1,0 +1,116 @@
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,                % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+ 
+\usepackage{XCharter}               % set font
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\usepackage{xcolor}                 % used only to flag placeholders in red
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
+ 
+% ensure PDF output will be all-Unicode and machine-readable
+\input{glyphtounicode}
+\pdfgentounicode=1
+ 
+% PLACEHOLDER MACRO: \ph{...} shows in red so you can find every number still to fill in.
+% Before submitting, replace each \ph{...} with your real value (or delete the clause),
+% then search the file for "\ph" to confirm none are left.
+\newcommand{\ph}[1]{{\color{red}[#1]}}
+ 
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
+ 
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt}
+ 
+% resume starts here
+\begin{document}
+ 
+% name
+\centerline{\Huge Benjamin Goodyear}
+ 
+\vspace{5pt}
+ 
+% contact information
+\centerline{\href{mailto:goodyear.ben.33@gmail.com}{goodyear.ben.33@gmail.com} | \href{https://goodyear33.github.io/}{Portfolio} | Reliability Status Clearance}
+ 
+\vspace{-10pt}
+ 
+% skills section
+\section*{Skills}
+\textbf{CAD:} Siemens NX, CATIA V5, SolidWorks \\
+%\textbf{Analysis:} Abaqus, LS-DYNA, STAR-CCM+, Thermal Desktop \\
+\textbf{Design:} Mechanism design, kinematics, rapid prototyping, aircraft weight and performance sizing \\
+\textbf{Programming:} Python, MATLAB, C++ 
+ 
+\vspace{-6.5pt}
+ 
+% experience section
+\section*{Experience}
+\textbf{Mechanical Engineering Student, Canadarm3,} MDA Space -- Brampton, ON \hfill Jan 2025 -- Aug 2026 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Successfully qualified the design of primary thermal management components for Gateway Robotic Interfaces against EVA impact load requirements, by leading the milestone campaign and communicating with CSA
+  \item Responsible for a fastener characterization effort to quantify life cycle effects of lubrication-induced FOD generation resulting in a 3x life extension of fastening systems for lunar environment robotic assemblies
+  \item Conducted structural and mechanical analysis on ground support equipment by calculating primary loads and designing mechanical components to successfully test robotic interfaces under representative loading conditions 
+  %\item Traced 3 requirements to flight design features of lunar-orbit robotic interfaces, \ph{result}, by communicating with internal and CSA stakeholders and authoring qualification-level procedures and reports
+%  \item Contributed \ph{N sections} to the Canadian Lunar Utility Vehicle rover concept of operations, \ph{result}, by \ph{what you drafted or modelled}
+  % OPTIONAL, add only if true: \item Designed \ph{fixture, bracket, or hardware change} in \ph{CAD tool}, \ph{result}, by \ph{method}
+\end{itemize}
+ 
+\textbf{Aerospace Engineering Student,} Gastops Ltd. -- Ottawa, ON \hfill Jun 2024 -- Aug 2024 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Mitigated background voltage on oil debris monitoring sensors by 32\%, by conducting root cause analysis and presenting results to internal stakeholders, leading to a manufacturing change order.
+ % \item Achieved a 99\% match in predicted signal outputs for known inputs by modeling  the response of dampened electronic devices in \ph{MATLAB/Python}
+  \item Migrated F135 engine oil sensor BOM into PLM in 3 weeks by leading the PLM import project ahead of schedule
+\end{itemize}
+ 
+\vspace{-18.5pt}
+ 
+% projects section
+\section*{Projects}
+\textbf{Active Suspension for a Planetary Rover -- Chassis Lead, Carleton Rover Team} \hfill 
+\textf Sept 2024 - Aug 2025 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Increased theoretical rover stability margin by 85\% and locomotion terrain envelope by leading the design of an independent four-actuator active suspension with real-time terrain response
+%  \item Advanced designs through active review of two PDRs and one CDR in 3 years, \ph{result}, by directing a 5-person team through design and prototyping campaigns
+  \item Conducted structural, mechanical and controls analysis on mechanisms and terrain response dynamics to meet design requirements resulting in a functional Engineering Design Unit 
+ % \item Authored a paper on the operational benefits of active suspension for extraterrestrial rovers, under peer review \ph{at venue}
+\end{itemize}
+ 
+\textbf{Clean-Sheet Ultimate Class Air Racer -- AIAA RFP Response, AERO 3002} \hfill 
+\textf Dec 2026 - May 2026 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Sized powerplant and landing gear of a conceptualized air racer, by analyzing thrust, flight-profile weights and landing shock loads resulting in a winning clean sheet aircraft design
+  \item Conducted flight airfoil tradestudies and modeled propeller dynamics to reduce drag caused by shocks at propeller tips by 34\% for piston-powered aircraft flying at a 500mph sea-level velocity 
+%  \item Resolved a landing gear resize that forced an empennage change by iterating the configuration and weight trade with a team of 4
+\end{itemize}
+ 
+\textbf{LINK: 6-DOF Robotic Manipulator -- Personal Project} 
+\hfill \textf May 2025 - Aug 2025 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Mapped human arm motion to joints over Bluetooth at 300ms latency by developing a robotic kinematic model using an anthropomorphic interfacing glove
+  \item Built a 6-DOF manipulator with 75 cm reach, driven by 5 servos and a stepper motor, using rapid prototyping techniques in SolidWorks and 3D-printing fabrication methods
+\end{itemize}
+ 
+\vspace{-15.5pt}
+ 
+% education section
+\section*{Education}
+\textbf{Carleton University} -- BEng. Aerospace Engineering 
+\hfill Expected May 2027 \\
+\textbf{Relevant Coursework:} Aircraft Aerodynamics, Vehicle Performance, Aerospace Systems Design, Aerospace Design \& Practice
+ 
+\end{document}
